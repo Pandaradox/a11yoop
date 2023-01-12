@@ -31,7 +31,7 @@ class MainActivityColorContrastTest {
 
         Log.d("Font Colors: ",
             colorContrastTarget.getA11yTarget().fetchSemanticsNode().config.getOrNull(
-                    ForegroundColors).toString())
+                ForegroundColors).toString())
         colorContrastTarget.checkColorContrast()
     }
 
@@ -41,7 +41,7 @@ class MainActivityColorContrastTest {
 
         Log.d("Font Colors: ",
             colorContrastTarget.getA11yTarget().fetchSemanticsNode().config.getOrNull(
-                    ForegroundColors).toString())
+                ForegroundColors).toString())
         colorContrastTarget.checkColorContrast()
     }
 }

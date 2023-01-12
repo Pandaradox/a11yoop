@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish' apply(true)
+    id 'org.jetbrains.dokka' version("1.7.10") apply(true)
 }
 
 android {
@@ -47,4 +49,23 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4"
     debugImplementation "androidx.compose.ui:ui-tooling"
     debugImplementation "androidx.compose.ui:ui-test-manifest"
+}
+
+allprojects {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                artifactId "a11yoopTestRelease"
+                version "test2"
+                groupId 'com.pandaradox.a11yoop'
+
+                afterEvaluate {
+                    from components.release
+                }
+            }
+        }
+    }
+}
+tasks.named("dokkaHtml") {
+    outputDirectory.set(file("src/main/dokkaDocs"))
 }
