@@ -12,9 +12,15 @@ android {
     defaultConfig {
         minSdk 33
         targetSdk 33
+        versionCode 1
+        versionName "0.0.1"
+        version(versionName)
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
 
     buildTypes {
@@ -30,6 +36,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
 }
 
 dependencies {
@@ -38,7 +55,7 @@ dependencies {
 //    implementation 'androidx.appcompat:appcompat'
     implementation 'androidx.core:core-ktx'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx'
-    implementation 'androidx.activity:activity-compose'
+    implementation 'androidx.activity:activity-compose:1.6.1'
     implementation "androidx.compose.ui:ui"
     implementation "androidx.compose.ui:ui-tooling-preview"
     implementation 'androidx.compose.material3:material3'
@@ -55,9 +72,9 @@ allprojects {
     publishing {
         publications {
             release(MavenPublication) {
-                artifactId "a11yoopTestRelease"
-                version "test2"
-                groupId 'com.pandaradox.a11yoop'
+                artifactId "a11yoop"
+                version "0.0.1"
+                groupId 'com.pandaradox.core'
 
                 afterEvaluate {
                     from components.release

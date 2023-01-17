@@ -5,7 +5,7 @@ import androidx.compose.ui.semantics.SemanticsPropertyKey
 import androidx.compose.ui.semantics.SemanticsPropertyReceiver
 
 val ForegroundColors = SemanticsPropertyKey<List<Color>>("ForegroundColors")
-var SemanticsPropertyReceiver.fontColors by ForegroundColors
+var SemanticsPropertyReceiver.foregroundColors by ForegroundColors
 
 val BackgroundColors = SemanticsPropertyKey<List<Color>>("BackgroundColors")
 var SemanticsPropertyReceiver.backgroundColors by BackgroundColors

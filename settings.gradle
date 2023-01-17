@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "A11yoop"
-include ':app'
+//include ':app'
 include ':a11yoop'

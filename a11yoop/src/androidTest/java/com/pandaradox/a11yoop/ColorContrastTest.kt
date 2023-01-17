@@ -1,6 +1,7 @@
 package com.pandaradox.a11yoop
 
 import android.util.Log
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -11,19 +12,25 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import com.pandaradox.a11yoop.color.ForegroundColors
 import com.pandaradox.a11yoop.color.backgroundColors
 import com.pandaradox.a11yoop.color.checkColorContrast
-import com.pandaradox.a11yoop.color.fontColors
+import com.pandaradox.a11yoop.color.foregroundColors
 import com.pandaradox.a11yoop.core.getA11yTarget
 import com.pandaradox.a11yoop.core.setA11yTarget
-import com.pandaradox.a11yoop.ui.theme.A11yoopTheme
 import org.junit.Rule
 import org.junit.Test
 
-class MainActivityColorContrastTest {
+class ColorContrastTest {
     @get:Rule
     val colorContrastTarget = createComposeRule()
 
     private fun ccWrapper(content: @Composable () -> Unit) =
-        colorContrastTarget.setContent { A11yoopTheme { content() } }
+        colorContrastTarget.setContent { MaterialTheme { content() } }
+
+    @Test
+    fun seeNodeConfig() {
+        ccWrapper { TextColorContrastComponentPass() }
+        Log.i("Node Config: ",
+            colorContrastTarget.getA11yTarget().fetchSemanticsNode().config.toString())
+    }
 
     @Test
     fun basicColorContrastFail() {
@@ -51,7 +58,7 @@ private fun TextColorContrastComponentFail() =
     Text(text = "Hello Android", modifier = Modifier
         .setA11yTarget()
         .semantics {
-            fontColors = listOf(
+            foregroundColors = listOf(
                 Color.Blue,
             )
             backgroundColors = listOf(
@@ -67,7 +74,7 @@ private fun TextColorContrastComponentPass() =
     Text(text = "Hello Android", modifier = Modifier
         .setA11yTarget()
         .semantics {
-            fontColors = listOf(
+            foregroundColors = listOf(
                 Color(0xFF000000),
             )
             backgroundColors = listOf(
