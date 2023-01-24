@@ -2,7 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish' apply(true)
-    id 'org.jetbrains.dokka' version("1.7.10") apply(true)
+    id 'org.jetbrains.dokka' version("1.7.20") apply(true)
 }
 
 android {
@@ -82,6 +82,4 @@ allprojects {
         }
     }
 }
-tasks.named("dokkaHtml") {
-    outputDirectory.set(file("src/main/dokkaDocs"))
-}
+dokkaHtml { outputDirectory.set(file("src/main/dokkaDocs")) }

@@ -1,0 +1,20 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.pandaradox.a11yoop.color////PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/index.html
+$dokka.location:com.pandaradox.a11yoop.color//BackgroundColors/#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/-background-colors.html
+$dokka.location:com.pandaradox.a11yoop.color//ForegroundColors/#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/-foreground-colors.html
+$dokka.location:com.pandaradox.a11yoop.color//backgroundColors/androidx.compose.ui.semantics.SemanticsPropertyReceiver#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/background-colors.html
+$dokka.location:com.pandaradox.a11yoop.color//checkLargeColorContrast/androidx.compose.ui.test.SemanticsNodeInteractionsProvider#kotlin.String/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/check-large-color-contrast.html
+$dokka.location:com.pandaradox.a11yoop.color//checkRegularColorContrast/androidx.compose.ui.test.SemanticsNodeInteractionsProvider#kotlin.String/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/check-regular-color-contrast.html
+$dokka.location:com.pandaradox.a11yoop.color//foregroundColors/androidx.compose.ui.semantics.SemanticsPropertyReceiver#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.color/foreground-colors.html
+$dokka.location:com.pandaradox.a11yoop.core////PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.core/index.html
+$dokka.location:com.pandaradox.a11yoop.core//A11Y_TARGET/#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.core/-a11-y_-t-a-r-g-e-t.html
+$dokka.location:com.pandaradox.a11yoop.core//getA11yTarget/androidx.compose.ui.test.SemanticsNodeInteractionsProvider#kotlin.String/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.core/get-a11y-target.html
+$dokka.location:com.pandaradox.a11yoop.core//setA11yTarget/androidx.compose.ui.Modifier#kotlin.String/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.core/set-a11y-target.html
+$dokka.location:com.pandaradox.a11yoop.testComponents////PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.testComponents/index.html
+$dokka.location:com.pandaradox.a11yoop.testComponents//LargeTextColorContrastComponentPass/#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.testComponents/-large-text-color-contrast-component-pass.html
+$dokka.location:com.pandaradox.a11yoop.testComponents//RegularTextColorContrastComponentPass/#/PointingToDeclaration/a11yoop/com.pandaradox.a11yoop.testComponents/-regular-text-color-contrast-component-pass.html
+com.pandaradox.a11yoop.color
+com.pandaradox.a11yoop.core
+com.pandaradox.a11yoop.testComponents
+
