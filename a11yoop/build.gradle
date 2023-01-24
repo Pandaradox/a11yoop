@@ -82,4 +82,4 @@ allprojects {
         }
     }
 }
-dokkaHtml { outputDirectory.set(file("src/main/dokkaDocs")) }
+dokkaHtml { outputDirectory.set(file("dokkaDocs")) }
