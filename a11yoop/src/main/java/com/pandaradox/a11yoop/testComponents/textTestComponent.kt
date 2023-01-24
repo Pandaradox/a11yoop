@@ -12,39 +12,50 @@ import com.pandaradox.a11yoop.color.backgroundColors
 import com.pandaradox.a11yoop.color.foregroundColors
 import com.pandaradox.a11yoop.core.setA11yTarget
 
-
+/**
+ * Basic Component for test development meeting 4.5 color contrast ratio
+ */
 @Composable
-fun RegularTextColorContrastComponentPass() =
+fun RegularTextColorContrastComponentPass() {
+    val backgroundColor = Color.Black
+    val foregroundColor = Color(0xFFEB0000)
     Text(
         text = "RegularText",
         modifier = Modifier
-            .background(Color.White)
+            .background(backgroundColor)
             .setA11yTarget()
             .semantics {
                 foregroundColors = listOf(
-                    Color.Black,
+                    foregroundColor,
                 )
                 backgroundColors = listOf(
-                    Color.White,
+                    backgroundColor,
                 )
             },
-        color = Color.Black)
+        color = foregroundColor)
+}
 
+/**
+ * Basic Component for test development meeting 3.5 color contrast ratio
+ */
 @Composable
-fun LargeTextColorContrastComponentPass() =
+fun LargeTextColorContrastComponentPass() {
+    val backgroundColor = Color.Black
+    val foregroundColor = Color(0xFFCA0000)
     Text(
         text = "LargeText",
         modifier = Modifier
             .size(35.dp)
-            .background(Color.Red)
+            .background(backgroundColor)
             .setA11yTarget()
             .semantics {
                 foregroundColors = listOf(
-                    Color.Black,
+                    foregroundColor,
                 )
                 backgroundColors = listOf(
-                    Color.Red,
+                    backgroundColor,
                 )
             },
-        color = Color.Black,
+        color = foregroundColor,
     )
+}
