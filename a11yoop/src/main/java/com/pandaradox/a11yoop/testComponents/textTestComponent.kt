@@ -10,6 +10,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.pandaradox.a11yoop.color.backgroundColors
 import com.pandaradox.a11yoop.color.foregroundColors
+import com.pandaradox.a11yoop.core.A11yoopCore
+import com.pandaradox.a11yoop.core.a11yoop
 import com.pandaradox.a11yoop.core.setA11yTarget
 
 /**
@@ -25,11 +27,18 @@ fun RegularTextColorContrastComponentPass() {
             .background(backgroundColor)
             .setA11yTarget()
             .semantics {
-                foregroundColors = listOf(
-                    foregroundColor,
-                )
-                backgroundColors = listOf(
-                    backgroundColor,
+                //without the class
+                foregroundColors = listOf()
+                backgroundColors = listOf()
+
+                //with the class
+                a11yoop = A11yoopCore(
+                    foregroundColors = listOf(
+                        foregroundColor,
+                    ),
+                    backgroundColors = listOf(
+                        backgroundColor,
+                    ),
                 )
             },
         color = foregroundColor)
