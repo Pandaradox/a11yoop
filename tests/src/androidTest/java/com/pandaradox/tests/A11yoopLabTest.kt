@@ -1,10 +1,10 @@
-package com.pandaradox.a11yoop
+package com.pandaradox.tests
 
 import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.test.junit4.createComposeRule
 import com.pandaradox.a11yoop.core.getA11yTarget
-import com.pandaradox.a11yoop.testComponents.RegularTextColorContrastComponentPass
+import com.pandaradox.tests.testComponents.RegularTextColorContrastComponentPass
 import org.junit.Rule
 import org.junit.Test
 
