@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.test.junit4.createComposeRule
 import com.pandaradox.a11yoop.core.getA11yTarget
 import com.pandaradox.tests.testComponents.RegularTextColorContrastComponentPass
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 
@@ -15,6 +16,7 @@ class A11yoopLabTest {
     private fun testWrapper(content: @Composable () -> Unit) =
         testTarget.setContent(content)
 
+    @Ignore("Sandbox Test. Do not run with Bitrise.")
     @Test
     fun seeNodeConfig() {
         testWrapper { RegularTextColorContrastComponentPass() }
