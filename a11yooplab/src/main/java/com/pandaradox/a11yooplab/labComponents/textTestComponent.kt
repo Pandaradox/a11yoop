@@ -1,4 +1,4 @@
-package com.pandaradox.tests.testComponents
+package com.pandaradox.a11yooplab.labComponents
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.size
